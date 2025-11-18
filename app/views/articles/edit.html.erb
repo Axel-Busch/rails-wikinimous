@@ -1,0 +1,8 @@
+<h1>Editing article</h1>
+
+<%= render "form", article: @article %>
+
+<div class="mt-2">
+  <%= link_to "Show", article_path(@article.id) %> |
+  <%= link_to "Back", articles_path%>
+</div>

@@ -1,0 +1,14 @@
+<article>
+  <h1>
+    <%= @article.title %>
+    <small>
+      <%= link_to raw('<i class="fa fa-pencil"></i>'), edit_article_path %>
+      <%= link_to raw('<i class="fa-solid fa-trash"></i>'),
+        article_path(@article.id),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete the article: #{@article.title}"} %>
+    </small>
+  </h1>
+  <hr>
+  <p><%= @article.content %></p>
+
+</article>
